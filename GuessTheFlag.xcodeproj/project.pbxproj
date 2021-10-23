@@ -11,6 +11,7 @@
 		7D3812BD2721C671005D880D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3812BC2721C671005D880D /* ContentView.swift */; };
 		7D3812BF2721C672005D880D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3812BE2721C672005D880D /* Assets.xcassets */; };
 		7D3812C22721C672005D880D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3812C12721C672005D880D /* Preview Assets.xcassets */; };
+		7D7EB6F127224993001FCD72 /* GastonOpti.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EB6F027224993001FCD72 /* GastonOpti.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		7D3812BC2721C671005D880D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D3812BE2721C672005D880D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3812C12721C672005D880D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D7EB6F027224993001FCD72 /* GastonOpti.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GastonOpti.otf; sourceTree = "<group>"; };
+		7D7EB6F227224B0F001FCD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,8 @@
 		7D3812B92721C671005D880D /* GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				7D7EB6F227224B0F001FCD72 /* Info.plist */,
+				7D7EB6EF2722492E001FCD72 /* fonts */,
 				7D3812BA2721C671005D880D /* GuessTheFlagApp.swift */,
 				7D3812BC2721C671005D880D /* ContentView.swift */,
 				7D3812BE2721C672005D880D /* Assets.xcassets */,
@@ -65,6 +70,14 @@
 				7D3812C12721C672005D880D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D7EB6EF2722492E001FCD72 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EB6F027224993001FCD72 /* GastonOpti.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +140,7 @@
 			files = (
 				7D3812C22721C672005D880D /* Preview Assets.xcassets in Resources */,
 				7D3812BF2721C672005D880D /* Assets.xcassets in Resources */,
+				7D7EB6F127224993001FCD72 /* GastonOpti.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,12 +286,13 @@
 				DEVELOPMENT_TEAM = 435PDV6Y55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessTheFlag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,7 +302,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,12 +317,13 @@
 				DEVELOPMENT_TEAM = 435PDV6Y55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessTheFlag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
