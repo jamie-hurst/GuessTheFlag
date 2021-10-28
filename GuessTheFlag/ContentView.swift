@@ -27,13 +27,8 @@ struct ContentView: View {
     
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var playerScore = 0
-    @State private var tapCount = 0 {
-        didSet {
-            if tapCount == 8 {
-                showingGameOver = true
-            }
-        }
-    }
+    @State private var tapCount = 0
+        
     
     @State private var countries = countryList.shuffled()
     static let countryList = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
@@ -115,7 +110,12 @@ struct ContentView: View {
             
         }
         
-        showingScore = true
+        if tapCount == 8 {
+            showingGameOver = true
+        } else {
+            showingScore = true
+        }
+        
     }
     
     func askQuestion() {
