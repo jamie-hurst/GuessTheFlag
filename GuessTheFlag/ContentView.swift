@@ -107,7 +107,6 @@ struct ContentView: View {
             if playerScore > 0 {
                 playerScore -= 1
             }
-            
         }
         
         if tapCount == 8 {
