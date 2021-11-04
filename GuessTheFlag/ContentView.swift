@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FlagImage: View {
     var image: String
-
+    
     var body: some View {
         Image(image)
             .renderingMode(.original)
@@ -28,7 +28,8 @@ struct ContentView: View {
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var playerScore = 0
     @State private var tapCount = 0
-        
+    @State private var selectedFlag = -1
+    
     
     @State private var countries = countryList.shuffled()
     static let countryList = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
@@ -57,9 +58,17 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
-                            flagTapped(number)
+                            withAnimation {
+                                flagTapped(number)
+                            }
+                            
                         } label: {
                             FlagImage(image: countries[number])
+                                .opacity(selectedFlag == -1 || selectedFlag == number ? 1 : 0.25)
+                                .scaleEffect(selectedFlag == -1 || selectedFlag == number ? 1 : 0.90)
+                                .blur(radius: selectedFlag == -1 || selectedFlag == number ? 0 : 1)
+                                .animation(.default, value: selectedFlag)
+                                .rotation3DEffect(.degrees(selectedFlag == number && selectedFlag == correctAnswer ? 360 : 0), axis: (x: 0, y: 1, z: 0))
                         }
                     }
                     
@@ -97,6 +106,7 @@ struct ContentView: View {
     }
     
     func flagTapped(_ number: Int) {
+        selectedFlag = number
         tapCount += 1
         
         if number == correctAnswer {
@@ -114,14 +124,13 @@ struct ContentView: View {
         } else {
             showingScore = true
         }
-        
     }
     
     func askQuestion() {
         countries.remove(at: correctAnswer)
-        print(countries)
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        selectedFlag = -1
     }
     
     func resetGame() {
@@ -130,6 +139,7 @@ struct ContentView: View {
         countries = Self.countryList
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        selectedFlag = -1
     }
 }
 
