@@ -3,8 +3,10 @@
 
 #### An 8 round game that challenges users to guess the correct flag for a given country.
 
-Extended this app from the tutorial by enhancing the UI and adding a gradient background.
+Extended this app from the tutorial by enhancing the UI, adding animations, and adding a gradient background.
 
-https://user-images.githubusercontent.com/28959624/139301080-6ebab399-4933-40a1-af44-669424104795.mov
+
+https://user-images.githubusercontent.com/28959624/140251462-2c5ec1dd-3559-4a1c-b699-ccdf67c92c07.mov
+
 
 
