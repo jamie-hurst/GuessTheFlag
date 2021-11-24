@@ -1,5 +1,5 @@
 # GuessTheFlag
-### Project 2 from #100DaysOfSwiftUI @ hackingWithSwift.com
+#### Project 2 from #100DaysOfSwiftUI @ hackingWithSwift.com
 
 An 8 round game that challenges users to guess the correct flag for a given country. Extended this app from the tutorial by enhancing the UI, adding animations, and adding a gradient background.
 
